@@ -1,4 +1,8 @@
-For finding the shortest path here, we will try first by bfs method so that we can map each vertex parents. And after we have done the bfs we can eventually find how to get to certain vertex from another vertex where we will find it by going reversely by look at each of the vertices’ parent (so we actually find it by going y to x when we need to find a way from x to y). There’s actually a problem in this mechanic, the problem is it is only useful if BFS was performed with x as the root of the search. And second, if the graph itself is an unweighted graph. 
+For finding the shortest path here, we will try first by bfs method so that we can map each vertex parents. And after we have done 
+the bfs we can eventually find how to get to certain vertex from another vertex where we will find it by going reversely by look at 
+each of the vertices’ parent (so we actually find it by going y to x when we need to find a way from x to y). There’s actually a 
+problem in this mechanic, the problem is it is only useful if BFS was performed with x as the root of the search. And second, if 
+the graph itself is an unweighted graph. 
 
 //-----------------------------------------------------------------------------
 #define MAXV 10000
