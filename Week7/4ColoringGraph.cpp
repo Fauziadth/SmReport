@@ -1,5 +1,8 @@
-In this problem, we need to assign a label/color to each vertex of a graph such that no edge links any two vertices with the same color. and our goal is to only use two colors (we call this as bipartite).
-To do this we can augment bfs so that whenever we discover a new vertex, we color it the opposite of its parent. But first we check whether any nondicovery edge links two vertices of the same color. if so, such a conflict means that the graph cannot be two-colored (not bipartite)
+In this problem, we need to assign a label/color to each vertex of a graph such that no edge links any two vertices with the 
+same color. and our goal is to only use two colors (we call this as bipartite).
+To do this we can augment bfs so that whenever we discover a new vertex, we color it the opposite of its parent. But first 
+we check whether any nondicovery edge links two vertices of the same color. if so, such a conflict means that the graph cannot
+be two-colored (not bipartite)
 
 #define MAXV 10000
 

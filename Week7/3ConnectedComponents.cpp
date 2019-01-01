@@ -1,8 +1,11 @@
-Connected components a maximal set of vertices such that there is a path between every pair of vertices. and these connected components are separate from each other if there is no connection between the pieces.
+Connected components a maximal set of vertices such that there is a path between every pair of vertices. and these connected 
+components are separate from each other if there is no connection between the pieces.
 
 1-2-3-4		5	6-7  <--- we can indentified it as 3 connected components
 
-Connected components can be found using bfs, since the vertex order does not matter. We start from the first vertex. anything we discover during this search must be part of the same connected component. We then repeat the search from any undiscovered vertex, because we can indicate that as a different component from its state.
+Connected components can be found using bfs, since the vertex order does not matter. We start from the first vertex. anything 
+we discover during this search must be part of the same connected component. We then repeat the search from any undiscovered 
+vertex, because we can indicate that as a different component from its state.
 
 #define MAXV 10000
 

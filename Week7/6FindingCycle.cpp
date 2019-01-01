@@ -1,4 +1,6 @@
-To find if there's any cycle within our graph or no we can go check for the back edges. back edges are the key to finding a cycle in an undirected graph. if there is no back edge, all edges are tree edges, and no cycle exists in a tree. But any back edge going from x to an ancestor y creates a cycle with the tree path from y to x. We can actually find this cycle using DFS.
+To find if there's any cycle within our graph or no we can go check for the back edges. back edges are the key to finding a cycle 
+in an undirected graph. if there is no back edge, all edges are tree edges, and no cycle exists in a tree. But any back 
+edge going from x to an ancestor y creates a cycle with the tree path from y to x. We can actually find this cycle using DFS.
 
 ancestor: suppose that y is an ancestor in the dfs tree. it means that we must enter y before x. 
 //-----------------------------------------------------------------------------

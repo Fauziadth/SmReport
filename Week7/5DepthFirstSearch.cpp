@@ -1,5 +1,11 @@
-The algorithm of this depth first search is actually not much different than the BFS mechanics. The main thing that differentiate DFS from BFS is in DFS we actually use a structure stacks when the BFS use a queue structure. In DFS it’s applied LIFO (Last in First out) principle. By using this type, in DFS the order in which they explore vertices is by lurching along a path, visiting a new neighbor if one is available, and backing up when we only have previously discovered vertices. 
-Interestingly in DFS we don’t need to really implement with the stack structure instead we can use a recursion to eliminate the need to keep an explicit stack. In DFS as well is introduced two classes for an edges of an undirected graph, they are tree edges and back edges. Tree edges is the edges that discover new vertices, and are those encoded in the parent relation. And back edges are those whose other endpoint is an ancestor of the vertex being expanded so like going back into the tree.
+The algorithm of this depth first search is actually not much different than the BFS mechanics. The main thing that differentiate 
+DFS from BFS is in DFS we actually use a structure stacks when the BFS use a queue structure. In DFS it’s applied LIFO (Last in 
+First out) principle. By using this type, in DFS the order in which they explore vertices is by lurching along a path, visiting a 
+new neighbor if one is available, and backing up when we only have previously discovered vertices. 
+Interestingly in DFS we don’t need to really implement with the stack structure instead we can use a recursion to eliminate the 
+need to keep an explicit stack. In DFS as well is introduced two classes for an edges of an undirected graph, they are tree edges 
+and back edges. Tree edges is the edges that discover new vertices, and are those encoded in the parent relation. And back edges 
+are those whose other endpoint is an ancestor of the vertex being expanded so like going back into the tree.
 
 
 //-----------------------------------------------------------------------------

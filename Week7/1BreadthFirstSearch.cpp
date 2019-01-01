@@ -1,5 +1,11 @@
-So basically it works as follow. In BFS, we need to choose a vertex to works as a root. And then we initialize all of the vertex as undiscovered first except the root as a discovered. Meanwhile to put the vertex which we will process later we use a queue data structure that works FIFO (First in First out) and initialize the queue with the root. After that we begin the iteration which will take a vertex from the queue list (the oldest list) as a v vertex and will process all the adjacent vertex (as u vertex) of the vertex v, the process itself is depend to what we desire but we need to change the state from undiscovered to discovered state and put the vertex u to the queue list and store the parent of u (which is v). After all the adjacent vertex of v have been discovered we mark the state of v as process whereas we have look at every edges and vertices that connected to the vertex v.
-
+So basically it works as follow. In BFS, we need to choose a vertex to works as a root. And then we initialize all of the vertex as 
+undiscovered first except the root as a discovered. Meanwhile to put the vertex which we will process later we use a queue data 
+structure that works FIFO (First in First out) and initialize the queue with the root. After that we begin the iteration which will 
+take a vertex from the queue list (the oldest list) as a v vertex and will process all the adjacent vertex (as u vertex) of the vertex 
+v, the process itself is depend to what we desire but we need to change the state from undiscovered to discovered state and put the 
+vertex u to the queue list and store the parent of u (which is v). After all the adjacent vertex of v have been discovered we mark 
+the state of v as process whereas we have look at every edges and vertices that connected to the vertex v.
+ 
 
 //-----------------------------------------------------------------------------
 #define MAXV 10000
