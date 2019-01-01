@@ -1,5 +1,13 @@
-The algorithm is start from a set of vertices which are not connected/forming a tree with other and by each step we will pick a vertex and try to connect it to the tree. We actually can call this a greedy algorithm whereas where we start from a certain vertex and at each iteration we add the lowest-weight edge linking a vertex in the tree to a vertex on the outside.
-So basically what the algorithm will do is first of all we need to initialize a condition where all the vertices are not in the tree body, initial distance value  with max value of int (if we use int type) and parent with none (or -1). After that we will start with a certain vertex v as an initial tree node. And after that we will look for every of its edge with its neighbor w. we will see for that vertex w, if the weight of edge with the v is become smaller it will set vertex v as a new parents. After all of w has been processed we will find a new vertex v by a condition that the vertex is not yet assigned to the tree and it has the smallest distance with the vertex v. and so on until all the vertex has been assigned to the tree with minimum weighted edges.
+The algorithm is start from a set of vertices which are not connected/forming a tree with other and by each step we will pick 
+a vertex and try to connect it to the tree. We actually can call this a greedy algorithm whereas where we start from a certain 
+vertex and at each iteration we add the lowest-weight edge linking a vertex in the tree to a vertex on the outside.
+	
+So basically what the algorithm will do is first of all we need to initialize a condition where all the vertices are not in the 
+tree body, initial distance value  with max value of int (if we use int type) and parent with none (or -1). After that we will 
+start with a certain vertex v as an initial tree node. And after that we will look for every of its edge with its neighbor w. 
+we will see for that vertex w, if the weight of edge with the v is become smaller it will set vertex v as a new parents. After 
+all of w has been processed we will find a new vertex v by a condition that the vertex is not yet assigned to the tree and it has 
+the smallest distance with the vertex v. and so on until all the vertex has been assigned to the tree with minimum weighted edges.
 
 //-----------------------------------------------------------------------------
 //Algorithm for graph structure
