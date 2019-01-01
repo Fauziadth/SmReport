@@ -1,4 +1,9 @@
-Kruskal’s is an alternate approach to finding minimum spanning trees that somehow proves more efficient on sparse graphs. It is actually similar to prim’s which is a greedy algorithm, but it doesn’t need to start with a particular vertex. The algorithm builds up connected components of vertices, where initially each vertex forms its own separate component like a tree the algorithm repeatedly considers the lightest remaining edge a will see if the edge connecting a pair of vertices in the same component or not, if the vertices already in the same component then the edge will be discarded, and if not, then the edge will be assigned as a connector between those components.
+Kruskal’s is an alternate approach to finding minimum spanning trees that somehow proves more efficient on sparse graphs. 
+It is actually similar to prim’s which is a greedy algorithm, but it doesn’t need to start with a particular vertex. 
+The algorithm builds up connected components of vertices, where initially each vertex forms its own separate component
+like a tree the algorithm repeatedly considers the lightest remaining edge a will see if the edge connecting a pair of 
+vertices in the same component or not, if the vertices already in the same component then the edge will be discarded, 
+and if not, then the edge will be assigned as a connector between those components.
 
 //-----------------------------------------------------------------------------
 //Algorithm for graph structure
