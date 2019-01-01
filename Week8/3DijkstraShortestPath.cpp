@@ -1,4 +1,8 @@
-We can actually see that the algorithm is a little similar with prim’s algorithm for the minimum spanning tree. The differences are located at the condition for deciding a vertex to be the parents. In this algorithm, we can get a new parent if the distance to reach vertex we observed from the starting vertex is become smaller. We can see from the line which state a condition distance[v] > distance[v] + weight. There’s actually some condition to be avoided if we need to use this method. It’s when we are working with negative-cost edges. 
+We can actually see that the algorithm is a little similar with prim’s algorithm for the minimum spanning tree. The differences 
+are located at the condition for deciding a vertex to be the parents. In this algorithm, we can get a new parent if the distance 
+to reach vertex we observed from the starting vertex is become smaller. We can see from the line which state a condition 
+distance[v] > distance[v] + weight. There’s actually some condition to be avoided if we need to use this method. It’s when we are 
+working with negative-cost edges. 
 
 //-----------------------------------------------------------------------------
 //Algorithm for graph structure
