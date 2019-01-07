@@ -58,8 +58,5 @@ int main()
         checkfib(n);
     }
 
-    //cout<<"HELLO";
-
-
     return 0;
 }
