@@ -1,12 +1,16 @@
-Binary Search Tree : Insertion
-https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem
-references : Skiena page 80
-
 Tree: Height of a Binary Tree
 https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem
+https://github.com/Fauziadth/SmReport/blob/master/Week5/BinaryTreeHeight.cpp
 
 Tree: Preorder Traversal
 https://www.hackerrank.com/challenges/tree-preorder-traversal/problem
+https://github.com/Fauziadth/SmReport/blob/master/Week5/TreePreorderTraversal.cpp
 
 Tree: Inorder Traversal
 https://www.hackerrank.com/challenges/tree-inorder-traversal/problem
+https://github.com/Fauziadth/SmReport/blob/master/Week5/TreeInorderTraversal.cpp
+
+Binary Search Tree : Insertion
+https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem
+https://github.com/Fauziadth/SmReport/blob/master/Week5/BSTinsertion.cpp
+references : Skiena page 80

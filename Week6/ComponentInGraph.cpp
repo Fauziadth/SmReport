@@ -1,111 +1,74 @@
-#include<iostream> 
-#include<list> 
-  
-using namespace std; 
-    
-class Graph { 
-	//Vertices 
-    int V;    
-  
-    //Pointer to an array containing adjacency lists and boolean to marking the visited node
-    list<int> *adj;    
-    bool *visited;
+#define MAXV 10000
 
-    public: 
-	//Fucntion for initializing a graph
-    Graph(int V);   
-  
-    //Adding edge to the graph
-    void addEdge(int v, int w);  
+//Helper for DFS dan BFS
+bool processed[MAXV+1];
+bool discovered[MAXV+1];
+int parent[MAXV+1];
+bool finished = false;
 
-	//Function to put in the main body
-    void doBFS();
-  
-    //Method to see how long a node s connected to another
-    int BFSlong(int s);   
-}; 
-  
-Graph::Graph(int V) { 
-	//initialize
-    this->V = V; 
-    adj = new list<int>[V+1]; 
 
-    visited = new bool[V+1]; 
-    for(int i = 0; i < V; i++){
-        visited[i] = false; 
-    }
-} 
-  
-void Graph::addEdge(int v, int w) { 
-	//add w to the adjacency list of v
-    adj[v].push_back(w);  
-} 
+typedef struct EDGENODE{
+    int y;
+    int weight;
+    struct EDGENODE *next;
+} edgenode;
 
-void Graph::doBFS(){
-	//initialize the value of the smallest and the largest connected vertices
-    int min = this->V * 2, max = 0, count;
+typedef struct {
+    edgenode *edges[MAXV+1];
+    int degree[MAXV+1];
+    int nvertices;
+    int nedges;
+    bool directed;
+} graph;
 
-    for (int i = 1; i<=this->V; i++){
-		//we dont need to check a node that has visited when trying to checked another node before.
-        if (!visited[i]){
-            count = BFSlong(i);
-            if (count > 1 && count <min) min = count;
-            if (count > max) max = count;
-        }
-    }
-    cout<<min<<" "<<max;
+void initialize_graph(graph *g, bool directed){
+    g->nvertices = 0;
+    g->nedges = 0;
+    g->directed = directed;
+
+    for (int i=1; i<MAXV; i++) g->degree[i] = 0;
+    for (int i=1; i<MAXV; i++) g->edges[i] = 0;
 }
 
-
-int Graph::BFSlong(int s) { 
+void insert_edge(graph *g, int x, int y, bool directed){
+    edgenode *p; //Temporary pointer
+    p = (edgenode*)malloc(sizeof(edgenode));
     
-	//initialize the counter for node length
-    int count = 0;
-  
-    // Create a queue
-    list<int> queue; 
-  
-    // Mark the current node as visited
-    visited[s] = true; 
-	//enqueue
-    queue.push_back(s); 
-  
-    // 'i' will be used to get all adjacent vertices of a vertex 
-    list<int>::iterator i; 
-  
-    while(!queue.empty()) { 
-        // Dequeue from queue list
-        s = queue.front(); 
-		//count up as the there's more node discovered
-        count++;
-        queue.pop_front(); 
-  
-        // Get all adjacent vertices of the dequeued vertex s.
-        for (i = adj[s].begin(); i != adj[s].end(); ++i) { 
-            if (!visited[*i]) { //checking if the adjacent vertices has yet visited
-                visited[*i] = true; 
-                queue.push_back(*i); 
-            } 
-        } 
-    } 
-    return count;
-} 
-  
-  
-int main() 
-{ 
-    int N, g, b;
-	
-    cin>>N;
-    Graph gr(2*N); 
-    for (int i = 0; i< N; i++){
-        cin>>g>>b;
-		//vice versa to make undirected edge
-        gr.addEdge(g, b); 
-        gr.addEdge(b, g);
+    //p->weight = NULL;
+    p->y = y;
+    p->next = g->edges[x];
+    
+    g->edges[x] = p;
+    
+    g->degree[x] ++;
+}
+
+void process_edge(int v, int y){
+    //Desired process
+}
+
+void dfs(graph *g, int v){
+    edgenode *p;
+    int y;
+    
+    if(finished) return;
+    
+    discovered[v] = true;
+    
+    p = g->edges[v];
+    while (p != NULL) {
+        y = p->y;
+        if (discovered [y] == false){
+            parent[y] = v;
+            process_edge(v,y);
+            dfs(g,y);
+        }
+        else if((!processed[y]) || (g->directed))
+            process_edge(v,y);
+        if (finished) return;
+        p = p->next;
     }
     
-    gr.doBFS();
-  
-    return 0; 
-} 
+    processed[v] = true;
+}
+
