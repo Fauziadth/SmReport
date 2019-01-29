@@ -1,5 +1,8 @@
 //https://www.hackerrank.com/challenges/binomial-coefficients/problem
 //But still not working for very long number problems
+//It can be achieved by using lucas theorem here
+//https://en.wikipedia.org/wiki/Lucas%27s_theorem
+//But my main focus is to implement the dynamic programming
 
 #include <bits/stdc++.h>
 
